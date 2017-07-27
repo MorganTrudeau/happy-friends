@@ -16,7 +16,7 @@ class PostsStore extends Reflux.Store {
   }
 
   getState(data) {
-    axios.get('http://localhost:8888/api/posts')
+    axios.get('/api/posts')
       .then(response => {
         this.setState({posts:response.data});
       })
@@ -32,7 +32,7 @@ class PostsStore extends Reflux.Store {
       }
     };
 
-    axios.post('http://localhost:8888/api/posts',
+    axios.post('/api/posts',
       {"text": text, "username": username}, config)
         .then(response => {
           console.log(response);
