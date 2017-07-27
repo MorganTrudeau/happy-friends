@@ -16,7 +16,7 @@ class PostsStore extends Reflux.Store {
   }
 
   getState(data) {
-    axios.get('https://safe-ocean-15252.herokuapp.com/api/posts')
+    axios.get('http://localhost:8888/api/posts')
       .then(response => {
         this.setState({posts:response.data});
       })
@@ -33,7 +33,7 @@ class PostsStore extends Reflux.Store {
       }
     };
 
-    axios.post('https://safe-ocean-15252.herokuapp.com/api/posts', 
+    axios.post('http://localhost:8888/api/posts', 
       {withCredentials:true},
       {"text": text, "username": username}, config)
         .then(response => {

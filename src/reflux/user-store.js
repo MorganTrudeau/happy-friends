@@ -19,7 +19,7 @@ class UserStore extends Reflux.Store {
       }
     };
 
-    axios.post('https://safe-ocean-15252.herokuapp.com/auth/login', 
+    axios.post('http://localhost:8888/auth/login', 
       {"username": username, "password": password}, config)
     .then(response => {
         console.log(response);
