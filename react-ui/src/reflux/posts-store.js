@@ -16,7 +16,7 @@ class PostsStore extends Reflux.Store {
   }
 
   getState(data) {
-    axios.get('/api/posts')
+    axios.get('http://localhost:9999/api/posts')
       .then(response => {
         this.setState({posts:response.data});
       })

@@ -19,7 +19,7 @@ class UserStore extends Reflux.Store {
       }
     };
 
-    axios.post('http://localhost:8888/auth/login', 
+    axios.post('/auth/login', 
       {"username": username, "password": password}, config)
     .then(response => {
         console.log(response);
